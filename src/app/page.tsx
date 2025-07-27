@@ -16,11 +16,9 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">Features</a>
               <a href="#pricing" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">Pricing</a>
-              <a href="#about" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">About</a>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Button variant="ghost">Log in</Button>
-              <Button>Try for free</Button>
+              <a href="#testimonials" className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">Testimonials</a>
+              <Button variant="outline">Sign In</Button>
+              <Button>Get Started</Button>
             </div>
           </div>
         </div>
@@ -28,24 +26,26 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
             <Badge variant="secondary" className="mb-4">
-              Introducing custom automations
+              <Zap className="w-4 h-4 mr-2" />
+              AI-Powered Assistant
             </Badge>
-            <h1 className="text-4xl sm:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl dark:text-white">
               Meet your AI Agent
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
-              AI assistant designed to streamline your digital workflows and handle mundane tasks, 
-              so you can focus on what truly matters
+            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              Transform your workflow with intelligent automation. SkyAgent learns your patterns, 
+              anticipates your needs, and handles complex tasks with precision.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-3">
-                Try for Free
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Button size="lg" className="group">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                Learn More
+              <Button variant="outline" size="lg">
+                Watch Demo
               </Button>
             </div>
           </div>
@@ -53,123 +53,241 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Empower Your Workflow with AI
+      <section id="features" className="py-20 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+              Everything you need to work smarter
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Ask your AI Agent for real-time collaboration, seamless integrations, and actionable insights to streamline your operations.
+            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              SkyAgent combines cutting-edge AI with intuitive design to revolutionize how you work.
             </p>
           </div>
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-slate-900 dark:text-white">
+                  <Users className="h-5 w-5 flex-none text-blue-600" />
+                  Real-time Collaboration
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600 dark:text-slate-300">
+                  <p className="flex-auto">
+                    Work together seamlessly with AI-powered suggestions and real-time updates across your team.
+                  </p>
+                </dd>
+              </div>
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-slate-900 dark:text-white">
+                  <Shield className="h-5 w-5 flex-none text-green-600" />
+                  Enterprise Security
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600 dark:text-slate-300">
+                  <p className="flex-auto">
+                    Bank-level security with end-to-end encryption and compliance with industry standards.
+                  </p>
+                </dd>
+              </div>
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-slate-900 dark:text-white">
+                  <TrendingUp className="h-5 w-5 flex-none text-purple-600" />
+                  Smart Analytics
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-slate-600 dark:text-slate-300">
+                  <p className="flex-auto">
+                    Get insights into your workflow patterns and optimize your productivity with AI-driven analytics.
+                  </p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="border-0 shadow-lg">
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 sm:py-32 bg-white dark:bg-slate-900">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+              Simple, transparent pricing
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              Choose the plan that's right for you and your team.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-y-6 sm:mt-20 sm:max-w-none sm:grid-cols-3">
+            <Card className="relative">
               <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                <CardTitle>Starter</CardTitle>
+                <CardDescription>Perfect for individuals and small teams</CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold">$9</span>
+                  <span className="text-slate-600 dark:text-slate-300">/month</span>
                 </div>
-                <CardTitle>Real-time AI Collaboration</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
-                  Experience real-time assistance. Ask your AI Agent to coordinate tasks, answer questions, and maintain team alignment.
-                </CardDescription>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Up to 5 team members
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Basic AI features
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Email support
+                  </li>
+                </ul>
+                <Button className="w-full mt-6">Get Started</Button>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg">
+            <Card className="relative border-blue-600">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-blue-600 text-white">Most Popular</Badge>
+              </div>
               <CardHeader>
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-green-600 dark:text-green-400" />
+                <CardTitle>Professional</CardTitle>
+                <CardDescription>For growing businesses</CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold">$29</span>
+                  <span className="text-slate-600 dark:text-slate-300">/month</span>
                 </div>
-                <CardTitle>Seamless Integrations</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
-                  Unite your favorite tools for effortless connectivity. Boost productivity through interconnected workflows.
-                </CardDescription>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Up to 25 team members
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Advanced AI features
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Priority support
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Custom integrations
+                  </li>
+                </ul>
+                <Button className="w-full mt-6">Get Started</Button>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-lg">
+            <Card className="relative">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                <CardTitle>Enterprise</CardTitle>
+                <CardDescription>For large organizations</CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold">$99</span>
+                  <span className="text-slate-600 dark:text-slate-300">/month</span>
                 </div>
-                <CardTitle>Instant Insight Reporting</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
-                  Transform raw data into clear insights in seconds. Empower smarter decisions with real-time, always-learning intelligence.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-                </div>
-                <CardTitle>Smart Automation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Set it, forget it. Your AI Agent tackles repetitive tasks so you can focus on strategy, innovation, and growth.
-                </CardDescription>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Unlimited team members
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Custom AI models
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    24/7 phone support
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-600 mr-2" />
+                    Dedicated account manager
+                  </li>
+                </ul>
+                <Button className="w-full mt-6">Contact Sales</Button>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-slate-50 dark:bg-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Pricing that scales with you
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+              Loved by teams worldwide
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300">
-              Whichever plan you pick, it's free until you love your docs. That's our promise.
+            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              See what our customers have to say about SkyAgent.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 border-slate-200 dark:border-slate-700">
-              <CardHeader>
-                <CardTitle>Free</CardTitle>
-                <div className="text-3xl font-bold">$0<span className="text-lg text-slate-600 dark:text-slate-400">/month</span></div>
-                <CardDescription>Perfect for individual users</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button className="w-full" variant="outline">Start Free</Button>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-3 gap-8 text-sm leading-6 text-slate-900 sm:mt-20 sm:max-w-none sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+            <Card className="relative">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  "SkyAgent has transformed how our team collaborates. The AI suggestions are incredibly accurate and save us hours every week."
+                </p>
+                <div className="flex items-center">
+                  <div className="h-8 w-8 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+                  <div className="ml-3">
+                    <p className="font-semibold text-slate-900 dark:text-white">Sarah Johnson</p>
+                    <p className="text-slate-600 dark:text-slate-300">Product Manager, TechCorp</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-blue-500 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-blue-500 text-white">Popular</Badge>
-              </div>
-              <CardHeader>
-                <CardTitle>Pro</CardTitle>
-                <div className="text-3xl font-bold">$12<span className="text-lg text-slate-600 dark:text-slate-400">/month</span></div>
-                <CardDescription>Ideal for professionals and small teams</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button className="w-full">Upgrade to Pro</Button>
+            <Card className="relative">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  "The security features give us peace of mind, and the integration capabilities are seamless. Highly recommended!"
+                </p>
+                <div className="flex items-center">
+                  <div className="h-8 w-8 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+                  <div className="ml-3">
+                    <p className="font-semibold text-slate-900 dark:text-white">Michael Chen</p>
+                    <p className="text-slate-600 dark:text-slate-300">CTO, StartupXYZ</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-slate-200 dark:border-slate-700">
-              <CardHeader>
-                <CardTitle>Enterprise</CardTitle>
-                <div className="text-3xl font-bold">$24<span className="text-lg text-slate-600 dark:text-slate-400">/month</span></div>
-                <CardDescription>Best for large teams and enterprise-level organizations</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button className="w-full" variant="outline">Contact Sales</Button>
+            <Card className="relative">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  "The analytics insights have helped us optimize our workflows significantly. ROI was immediate."
+                </p>
+                <div className="flex items-center">
+                  <div className="h-8 w-8 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+                  <div className="ml-3">
+                    <p className="font-semibold text-slate-900 dark:text-white">Emily Rodriguez</p>
+                    <p className="text-slate-600 dark:text-slate-300">Operations Director, GrowthCo</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -177,61 +295,64 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Automate. Simplify. Thrive
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Start Your 30-Day Free Trial Today
-          </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-            Get Started Now
-          </Button>
-          <p className="text-blue-100 mt-4">Cancel anytime, no questions asked</p>
+      <section className="py-20 sm:py-32 bg-blue-600">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Ready to transform your workflow?
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-blue-100">
+              Join thousands of teams already using SkyAgent to work smarter, not harder.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Button size="lg" variant="secondary" className="group">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
+                Schedule Demo
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-lg font-semibold mb-4">SkyAgent</h3>
               <p className="text-slate-400">
-                AI assistant designed to streamline your digital workflows and handle mundane tasks, 
-                so you can focus on what truly matters
+                Transforming workflows with intelligent AI assistance.
               </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white">About</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
-                <li><a href="#" className="hover:text-white">Blog</a></li>
-                <li><a href="#" className="hover:text-white">Careers</a></li>
-              </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-slate-400">
                 <li><a href="#" className="hover:text-white">Features</a></li>
                 <li><a href="#" className="hover:text-white">Pricing</a></li>
-                <li><a href="#" className="hover:text-white">API</a></li>
-                <li><a href="#" className="hover:text-white">Documentation</a></li>
+                <li><a href="#" className="hover:text-white">Integrations</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
+              <h4 className="font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><a href="#" className="hover:text-white">About</a></li>
+                <li><a href="#" className="hover:text-white">Blog</a></li>
+                <li><a href="#" className="hover:text-white">Careers</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-slate-400">
                 <li><a href="#" className="hover:text-white">Help Center</a></li>
-                <li><a href="#" className="hover:text-white">Community</a></li>
+                <li><a href="#" className="hover:text-white">Contact</a></li>
                 <li><a href="#" className="hover:text-white">Status</a></li>
-                <li><a href="#" className="hover:text-white">Security</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
+          <div className="mt-8 pt-8 border-t border-slate-800 text-center text-slate-400">
             <p>&copy; 2024 SkyAgent. All rights reserved.</p>
           </div>
         </div>
